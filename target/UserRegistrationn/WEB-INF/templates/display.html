@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Queue Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h1>Queue Table</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Login</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person : ${people}">
+        <td th:text="${person.getLogin()}"></td>
+        <td th:text="${person.getEmail()}"></td>
+        <td th:text="${person.getPassword()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

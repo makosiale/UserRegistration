@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Профиль</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <h1>Персональная информация</h1>
+    <a th:href="@{/exit}" class="btn btn-primary">Выход</a>
+</div>
+
+
+<hr class="border border-primary border-3 opacity-50">
+<div>
+    <h6>1. Логин: </h6>
+    <p th:text="${person.login}"></p>
+</div>
+<div>
+    <h6>2. Почта: </h6>
+    <p th:text="${person.email}"></p>
+</div>
+<div>
+    <h6>3. Пароль: </h6>
+    <p th:text="${person.password}"></p>
+</div>
+<hr class="border border-primary border-3 opacity-50">
+<div>
+    <a th:href="@{/update}" class="btn btn-primary">Обновить пользователя</a>
+    <a th:href="@{/delete}" class="btn btn-primary">Удалить пользователя</a>
+</div>
+</body>
+</html>
